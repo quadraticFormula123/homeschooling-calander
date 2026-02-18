@@ -1,0 +1,2 @@
+const calenderName = localStorage.getItem("calanderName") //gets item from local storage called calendar name
+document.querySelector("h1").textContent = calenderName //sets textContent of h1 to calenderName

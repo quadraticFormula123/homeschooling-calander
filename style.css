@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+body {
+    
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /*centers horizontally*/
+    text-align: center; /*centers vertically */
+    background-image: url(https://user-images.githubusercontent.com/13468728/233847739-219cb494-c265-4554-820a-bd3424c59065.jpg);
+    height: 100vh;
+}
+
+
+
+
+.title-box {
+    height: 450px;
+    width: 400;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3); /*applys a blur to everything behind the title-box element */
+    padding: 8px;
+    margin: 4px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    color: white;
+    gap: 30px;
+}
+
+
+
+.title-box input {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title-button {
+    margin: 20px 20px;
+    font-family: 'Poppins', sans-serif;
+    width: 300px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 18px;
+    background: white;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+.title-button:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.title-button:active {
+    transform: scale(0.9)
+}
+
+
+
