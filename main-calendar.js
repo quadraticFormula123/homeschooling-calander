@@ -41,3 +41,5 @@ function resetCalander() {
 function reset2(cell, index) {
     cell.textContent = ""
 }
+
+
