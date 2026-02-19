@@ -1,7 +1,7 @@
-const calenderName = localStorage.getItem("calanderName") //gets item from local storage called calendar name
-document.querySelector("h1").textContent = calenderName //sets textContent of h1 to calenderName
-const cells = document.querySelectorAll(".cell")
-const reset = document.getElementById("reset")
+const calenderName = localStorage.getItem("calanderName"); //gets item from local storage called calendar name
+document.querySelector("h1").textContent = calenderName; //sets textContent of h1 to calenderName
+const cells = document.querySelectorAll(".cell");
+const reset = document.getElementById("reset");
 reset.addEventListener("click", resetCalander);
 const saveButton = document.getElementById("saveButton");
 saveButton.addEventListener("click", save)
@@ -36,10 +36,29 @@ function getSavedItems(cell, index) {
 
 function resetCalander() {
     cells.forEach(reset2)
+    window.location.href="index.html"
 }
 
 function reset2(cell, index) {
     cell.textContent = ""
+    localStorage.removeItem("cell-" + index)
+}
+
+const pdfButton = document.getElementById("saveAsPDF")
+pdfButton.addEventListener("click", savePDF)
+
+function savePDF() {
+    const calanderElement = document.querySelector(".calendar")
+
+    const options = {
+        margin: 0.5,
+        filename: "My-Calendar.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: "in", format: "letter", orientation: "landscape" }
+    };
+
+    html2pdf().set(options).from(calanderElement).save();
 }
 
 

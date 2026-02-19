@@ -18,6 +18,7 @@ body {
     border: 0.3px solid white;
     padding: 25px;
     border-radius: 10px;
+    color: white;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(225,225,225, 0.3), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.25));
 }
 
@@ -29,5 +30,71 @@ body {
     cursor: pointer;
     border-radius: 7px;
     background: rgba(225, 225, 225, 0.2);
+    color: white;
     backdrop-filter: blur(2px);
+}
+
+#saveButton { /*for id's not classes we use the # not .*/
+    padding: 9px;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    margin-right: 300px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background: rgba(225,225,225, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+#reset {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+    margin-top: -39px;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background: rgba(225,225,225, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+#saveButton:hover {
+    opacity: 0.4;
+    transform: scale(1.09);
+}
+
+#reset:hover {
+    opacity: 0.4;
+    transform: scale(1.09);
+}
+
+#saveButton:active {
+    transform: scale(0.95);
+}
+
+#reset:active {
+    transform: scale(0.95);
+}
+
+#saveAsPDF {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background: rgba(225,225,225, 0.3);
+    backdrop-filter: blur(2px);
+    margin-top: -50px;
+    margin-right: -280px;
+}
+
+#saveAsPDF:hover {
+    opacity: 0.4;
+    transform: scale(1.09);
+}
+
+#saveAsPDF:active {
+    transform: scale(0.95);
 }
