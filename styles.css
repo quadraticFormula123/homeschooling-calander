@@ -10,16 +10,24 @@ body {
 }
 
 .calendar {
-    display: grid; /*I want this box to behave like a table, but with modern grid control*/
-    grid-template-columns: 100px repeat(5, 1fr); /*this
-    defines the column of your grid, to be 100px fixed width
-    repeat(5, 1fr) says for the next 5 columns they take equal share of the remaining 
-    space. 1fr = It tells the grid to split remaining space into parts. so each column
-    gets an equal share of the amount. and repeat (5..) just shorthand for
-    righting 1fr 5 times*/
+    display: grid; /*Make this box a grid container so its children can be arranged in rows and columns, like a table, but using modern grid rules*/
+    grid-template-columns: 100px repeat(5, 1fr); /* this means:Make the grid have columns like this: the first column is 100 pixels wide, and the next five columns all share the remaining space equally.*/
     grid-auto-rows: 80px; /* Each row without an explicit height will become 80px tall.*/
     width: 90%;
     max-width: 1000px;
     border: 0.3px solid white;
     padding: 25px;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(225,225,225, 0.3), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.25));
+}
+
+.cell {
+    border: 0.5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 7px;
+    background: rgba(225, 225, 225, 0.2);
+    backdrop-filter: blur(2px);
 }
