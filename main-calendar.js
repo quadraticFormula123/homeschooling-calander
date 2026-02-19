@@ -13,7 +13,7 @@ function askUser() {
     const subject = prompt("What is the subject for this cell?")
     if (subject) {
         this.textContent = subject;
-        this.style.color = "#000"
+        this.style.color = "white"
     }
 }
 
@@ -21,7 +21,7 @@ function save() {
     cells.forEach(function(cell, index) {
         localStorage.setItem("cell-" + index, cell.textContent);
     })
-    alert("Schedule saved!")
+    alert("Schedule saved 📅!")
 }
 
 cells.forEach(getSavedItems)
@@ -30,7 +30,7 @@ function getSavedItems(cell, index) {
     const savedContent = localStorage.getItem("cell-" + index)
     if (savedContent) {
         cell.textContent = savedContent
-        cell.style.color="#000"
+        cell.style.color = "white"
     }
 }
 
