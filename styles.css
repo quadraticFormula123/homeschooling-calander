@@ -8,3 +8,18 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+.calendar {
+    display: grid; /*I want this box to behave like a table, but with modern grid control*/
+    grid-template-columns: 100px repeat(5, 1fr); /*this
+    defines the column of your grid, to be 100px fixed width
+    repeat(5, 1fr) says for the next 5 columns they take equal share of the remaining 
+    space. 1fr = It tells the grid to split remaining space into parts. so each column
+    gets an equal share of the amount. and repeat (5..) just shorthand for
+    righting 1fr 5 times*/
+    grid-auto-rows: 80px; /* Each row without an explicit height will become 80px tall.*/
+    width: 90%;
+    max-width: 1000px;
+    border: 0.3px solid white;
+    padding: 25px;
+}
