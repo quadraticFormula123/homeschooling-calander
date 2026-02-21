@@ -101,5 +101,56 @@ body {
 }
 
 .time {
-    color: white;
+    color: black;
 }
+
+@media print {
+
+
+    body {
+        background-image: none !important;
+        background-color: white !important;
+        padding: 0 !important;
+        margin: 1 !important;
+        color: black !important;
+        margin: 1cm;
+    }
+
+    .button-container, .buttons, #saveButton, #reset, #saveAsPDF {
+        display: none !important;
+    }
+
+    .calendar {
+        display: grid !important;
+        grid-template-columns: 100px repeat(5, 1fr) !important;
+        width: 100% !important;
+        max-width: none !important;
+        background: white !important;
+        padding: 10px !important;
+        border: none !important;
+    }
+
+    .cell {
+        display: flex !important;
+        visibility: visible !important;
+        border: 1px solid black !important;
+        color: black !important;
+        background: white !important;
+        backdrop-filter: none !important;
+        opacity: 1 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .time {
+        color: black !important;
+    }
+
+    h1 {
+        color: black !important;
+    }
+}
+
+/* !important overrides normal CSS priority rules.
+
+It forces a style to win — even if another rule would normally take precedence. */

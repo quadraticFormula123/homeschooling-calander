@@ -13,7 +13,6 @@ function askUser() {
     const subject = prompt("What is the subject for this cell?")
     if (subject) {
         this.textContent = subject;
-        this.style.color = "white"
     }
 }
 
@@ -30,7 +29,6 @@ function getSavedItems(cell, index) {
     const savedContent = localStorage.getItem("cell-" + index)
     if (savedContent) {
         cell.textContent = savedContent
-        cell.style.color = "white"
     }
 }
 
@@ -48,17 +46,7 @@ const pdfButton = document.getElementById("saveAsPDF")
 pdfButton.addEventListener("click", savePDF)
 
 function savePDF() {
-    const calanderElement = document.querySelector(".calendar")
-
-    const options = {
-        margin: 0.5,
-        filename: "My-Calendar.pdf",
-        image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: "in", format: "letter", orientation: "landscape" }
-    };
-
-    html2pdf().set(options).from(calanderElement).save();
+    window.print()
 }
 
 
